@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Bouquet of Happiness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        header {
+            background: #ff6f61;
+            color: white;
+            padding: 20px;
+        }
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background: #ff6f61;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Order!</h1>
+
+        <nav>
+            <a href="home.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Order is Confirmed</h2>
+        <p>We appreciate your business! Your flowers will be delivered soon.</p>
+        <h3>Order Summary:</h3>
+        <div id="order-summary"></div>
+        <p><strong>Estimated Delivery:</strong> Within 3-5 business days.</p>
+        <button onclick="window.location.href='home.html'">Continue Shopping</button>
+    </main>
+    
+    <script src="index.js"></script>
+
+    <script src="https://js.stripe.com/v3/"></script>
+<button id="checkout-btn">Proceed to Payment</button>
+
+<script>
+    document.getElementById("checkout-btn").addEventListener("click", checkout);
+</script>
+
+</body>
+</html>
